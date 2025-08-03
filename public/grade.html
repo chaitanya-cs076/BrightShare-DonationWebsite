@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winners Page</title>
+  <style>
+    body {
+       
+      background-image: url("grade.jpg");
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0;
+      padding: 0%;
+     /* background-image: url("1\ copy.png");*/
+     background-color: rgb(181, 231, 82);
+      display: flex;
+      flex-direction: row;
+      height: 2cm;
+    }
+
+    div.nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3cm;
+      height: 2cm;
+      margin: 0%;
+      padding: 0%;
+      margin-right: 30px;
+      /* border-radius: 30px; */
+      font-weight: bold;
+      text-align: center;
+      align-items: center;
+      font-size: 20px;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav div:hover {
+      background-color:rgb(236, 236, 67);
+    }
+   .logo:hover{
+      background-color:rgb(181, 231, 82) ;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0;
+      margin: 0%;
+      font-weight: bold;
+      text-align: center;
+      align-items: center;
+      font-size: large;
+    }
+
+    #logo{
+       background-image: url(logo.png);
+       background-size: contain;
+       background-position: 100%;
+       background-repeat: no-repeat;
+    }
+
+    .nav1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 30px;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+      width: 3cm;
+      font-size: large;
+      font-weight: bold;
+      font-family: inherit;
+    }
+
+    .winners-section {
+  
+      text-align: center;
+      margin: 20px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .winner-container {
+      
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .position-label {
+      font-size: 18px;
+      margin-top: 5px;
+      color: #000;
+    }
+
+    .first-winner, .second-winner, .third-winner {
+      font-weight: bold;
+      margin-top: 10px;
+      padding: 15px;
+      border-radius: 50%;
+      color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(245, 245, 220, 0.738);
+      border: 2px solid #8B735B; /* Dark Beige */
+    }
+
+    .first-winner {
+      font-size: 32px;
+      width: 160px;
+      height: 160px;
+      margin: 10px;
+    }
+
+    .second-winner {
+      font-size: 28px;
+      width: 140px;
+      height: 140px;
+      margin: 10px;
+      margin-top: 10%;
+    }
+
+    .third-winner {
+      font-size: 24px;
+      width: 120px;
+      height: 120px;
+      margin: 10px;
+      margin-top: 20%;
+    }
+
+    .top-ten {
+      text-align: center;
+      margin: 20px;
+      width: 70%;
+    }
+
+    .top-ten h2 {
+      color: #8B735B; /* Brown */
+      background-color: rgba(245, 245, 220, 0.738);
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .top-ten-table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+      text-align: left;
+      background-color: rgba(245, 245, 220, 0.738);
+    }
+
+    .top-ten-table th, .top-ten-table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      color: #000;
+    }
+
+    .top-ten-table th {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .top-ten-list-item {
+      font-size: 18px;
+      margin: 5px;
+      color: #000;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav" id="logo"></div>
+    <div class="nav" id="home">Home</div>
+    <div class="nav" id="donate" >Donate</div>
+    <div class="nav" id="gallery">Gallery</div>
+    <div class="nav" id="grade" style="background-color: rgb(236, 236, 67)">Grade</div>
+    <div class="nav" id="conatctus">Contact Us</div>
+    <div class="nav" id="login" style="margin-left: 9cm;">Login</div>
+    <div class="nav" id="register">Register</div>
+  </nav>
+<br><br><br><br><br><br>
+  <div class="winners-section">
+    <div class="winner-container">
+      <div class="first-winner">John Doe</div>
+      <div class="position-label">I</div>
+    </div>
+    <div class="winner-container">
+      <div class="second-winner">Jane Smith</div>
+      <div class="position-label">II</div>
+    </div>
+    <div class="winner-container">
+      <div class="third-winner">Bob Johnson</div>
+      <div class="position-label">III</div>
+    </div>
+  </div>
+
+  <div class="top-ten">
+    <h2>Top Ten Winners</h2>
+    <table class="top-ten-table">
+      <thead>
+        <tr>
+          <th>Position</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>John Doe</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jane Smith</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Bob Johnson</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Alice Brown</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Charlie Davis</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Emily White</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Michael Black</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Olivia Green</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>David Wilson</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>John</tr>
+          </tr>
+</tbody>
+    </table>
+  </div>
+  <script>
+    document.getElementById("donate").addEventListener("click", function() {
+        // Change window location to the desired URL
+        window.location.href = "login.html";
+      });
+      document.getElementById("home").addEventListener("click", function() {
+        // Change window location to the desired URL
+        window.location.href = "h.html";
+      });
+      document.getElementById("gallery").addEventListener("click", function() {
+        // Change window location to the desired URL
+        window.location.href = "gallery.html";
+      });
+      document.getElementById("grade").addEventListener("click", function() {
+        // Change window location to the desired URL
+        window.location.href = "grade.html";
+      });
+      document.getElementById("conatctus").addEventListener("click", function() {
+        // Change window location to the desired URL
+        window.location.href = "contact.html";
+      });
+      document.getElementById("login").addEventListener("click", function() {
+          // Change window location to the desired URL
+          window.location.href = "login.html";
+        });
+        document.getElementById("register").addEventListener("click", function() {
+          // Change window location to the desired URL
+          window.location.href = "doner_registration.html";
+        });
+  </script>
+</body>
+
+
+

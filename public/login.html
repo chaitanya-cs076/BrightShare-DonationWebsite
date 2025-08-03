@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orphanage Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+           
+           background-image: url("contact.jpg");
+           background-repeat: no-repeat;
+           background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0;
+      padding: 0%;
+     /* background-image: url("1\ copy.png");*/
+     background-color: rgb(181, 231, 82);
+      display: flex;
+      flex-direction: row;
+      height: 2cm;
+    }
+
+    div.nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3cm;
+      height: 2cm;
+      margin: 0%;
+      padding: 0%;
+      margin-right: 30px;
+      /* border-radius: 30px; */
+      font-weight: bold;
+      text-align: center;
+      align-items: center;
+      font-size: 20px;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav div:hover {
+      background-color:rgb(236, 236, 67);
+    }
+   .logo:hover{
+      background-color:rgb(181, 231, 82) ;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0;
+      margin: 0%;
+      font-weight: bold;
+      text-align: center;
+      align-items: center;
+      font-size: large;
+    }
+
+    #logo{
+       background-image: url(logo.png);
+       background-size: contain;
+       background-position: 100%;
+       background-repeat: no-repeat;
+    }
+
+    .nav1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 30px;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+      width: 3cm;
+      font-size: larger;
+      font-weight: bold;
+      font-family: inherit;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f9f9f9;
+      min-width: 3cm;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: none;
+    }
+
+    .dropdown a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown a:hover {
+      background-color:rgb(238, 237, 237);
+    }
+
+
+        .login-form {
+            background-color: rgba(245, 245, 220, 0.738);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 10cm;
+            text-align: center;
+            box-sizing: border-box;
+            position: fixed;
+            
+        }
+
+        .login-form input {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: rgb(145, 202, 29);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-form button:hover{
+            background-color: rgb(78, 113, 8);
+        }
+
+        .register-link {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        .register-link a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        #submit{
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+           background-color: rgb(169, 218, 69);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #submit:hover {
+    background-color: rgb(98, 133, 28);
+}
+
+
+ /* Style for the error message popup */
+ .error-message {
+    display: none; /* Hide the error message by default */
+    color: red; /* Text color for the error message */
+    font-size: 20px; /* Font size */
+    margin-bottom: 10px; /* Add margin at the bottom to separate from the form */
+    position: absolute; /* Position absolute to position it within the parent container */
+    top: calc(100% + 10px); /* Position it just below the login form */
+    left: 0;
+    right: 0;
+    text-align: center; /* Center the text */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    padding: 10px; /* Padding for the error message */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    font-weight: bold;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav" id="logo">
+          
+        </div>
+      <div class="nav" id="home">
+        Home</div>
+      </div>
+      <div class="nav" id="donate">Donate</div>
+      <div class="nav" id="gallery">Gallery
+      </div>
+      <div class="nav" id="grade">Grade</div>
+      <div class="nav" id="conatctus">Contact Us</div>
+      <div class="nav" id="login" style="margin-left: 9cm;">Login</div>
+
+      <div class="nav" id="register" >Register</div>
+  
+    </nav>
+
+    
+
+<form class="login-form" action="/login" method="POST">
+
+   <!-- Add this div to your HTML for displaying error message -->
+<div id="errorMessage" class="error-message" style="display: none;"></div>
+
+    <h2>Login</h2>
+    
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <input type="submit" value="login" id="submit">
+    <div class="register-link">
+        Not registered? <a href="regorphan.html">Register here</a>
+    </div>
+   
+</form>
+</div>
+
+
+<script>
+    // Add event listener to the div
+    document.getElementById("donate").addEventListener("click", function() {
+      // Change window location to the desired URL
+      window.location.href = "login.html";
+    });
+    document.getElementById("home").addEventListener("click", function() {
+      // Change window location to the desired URL
+      window.location.href = "h.html";
+    });
+    document.getElementById("gallery").addEventListener("click", function() {
+      // Change window location to the desired URL
+      window.location.href = "gallery.html";
+    });
+    document.getElementById("grade").addEventListener("click", function() {
+      // Change window location to the desired URL
+      window.location.href = "grade.html";
+    });
+    document.getElementById("conatctus").addEventListener("click", function() {
+      // Change window location to the desired URL
+      window.location.href = "contact.html";
+    });
+    document.getElementById("login").addEventListener("click", function() {
+      // Change window location to the desired URL
+      window.location.href = "login.html";
+    });
+
+    document.getElementById("register").addEventListener("click", function() {
+          // Change window location to the desired URL
+          window.location.href = "doner_registration.html";
+        });
+
+
+        
+   // Fetch the error message from the URL parameter and display it as a popup
+   const urlParams = new URLSearchParams(window.location.search);
+        const errorMessage = urlParams.get('error');
+        if (errorMessage) {
+            document.getElementById('errorMessage').textContent = errorMessage;
+            document.getElementById('errorMessage').style.display = 'block';
+        }
+
+
+
+</script>
+
+</body>
+</html>

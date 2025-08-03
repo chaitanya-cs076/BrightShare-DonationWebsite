@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <style>
+
+body, html {
+      margin: 0;
+      padding: 0;
+}
+
+nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0;
+      padding: 0%;
+     /* background-image: url("1\ copy.png");*/
+     background-color: rgb(181, 231, 82);
+      display: flex;
+      flex-direction: row;
+      height: 2cm;
+    }
+
+    div.nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3cm;
+      height: 2cm;
+      margin: 0%;
+      padding: 0%;
+      margin-right: 30px;
+      /* border-radius: 30px; */
+      font-weight: bold;
+      text-align: center;
+      align-items: center;
+      font-size: 20px;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav div:hover {
+      background-color:rgb(236, 236, 67);
+    }
+   .logo:hover{
+      background-color:rgb(181, 231, 82) ;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0;
+      margin: 0%;
+      font-weight: bold;
+      text-align: center;
+      align-items: center;
+      font-size: large;
+    }
+
+    #logo{
+       background-image: url(logo.png);
+       background-size: contain;
+       background-position: 100%;
+       background-repeat: no-repeat;
+    }
+
+    .nav1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 30px;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+      width: 3cm;
+      font-size: large;
+      font-weight: bold;
+      font-family: inherit;
+    }
+
+ 
+
+    div.welcome {
+      height: 310px;
+      display: flex;
+      align-items: center;
+      z-index: 100;
+      top:0;
+      margin-top:0%;
+      
+      background-image: url("smile.jpg");
+      
+      font-size: x-small;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      
+    }
+    div.main{
+      position:relative;
+      margin-top: 2cm;
+    }
+
+    
+    p.wlcm {
+      margin-left: 0.5cm;
+      font-size: 1.5cm;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px gray;
+      padding-top:8px;
+      color: white;
+    }
+
+    .container1{
+        display: flex;
+        padding-top: 1cm;
+        
+    }
+
+    div.descp{
+    /*  background-color:rgb(245, 245, 220);
+      border:3px solid rgb(197, 197, 28);
+      border-radius: 20px;*/
+      margin-top: 0%;
+      margin-top: 0.5cm;
+      margin-left: 0.2cm;
+     /* margin-right: 0.2cm;*/
+     width: 60%;
+    }
+
+    p.content{
+      font-size: 20px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      line-height:1cm;
+      color:rgb(128, 132, 129);
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-top: 0%;
+      padding-left: 2cm;
+      padding-right: 1cm;
+    }
+   
+
+    .flip-box {
+    /*background-color: #f1f1f1;*/
+    width:10cm;
+    height:10cm;
+    perspective: 1000px; /* Add perspective for 3D effect */
+    margin-top: 2cm;
+    margin-left: 2cm;
+    
+    
+  }
+
+  .flip-box-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    
+  }
+
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg); /* Flip the box on hover */
+  }
+
+  .flip-box-front,
+  .flip-box-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+  }
+
+  .flip-box-front {
+    
+    color: black;
+    border: 3px rgb(181, 231, 82) solid;
+    border-radius: 0.5cm;
+  }
+
+  .flip-box-back {
+    
+    color:rgb(128, 132, 129);
+    line-height:1cm;
+    border-radius:1cm;
+    font-size: 20px;
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transform: rotateY(180deg); /* Initially hide the back face */
+    border: 3px rgb(181, 231, 82) solid;
+    border-radius: 0.5cm; 
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+  }
+
+  button{
+    color:white ;
+    background-color: rgb(145, 202, 29);
+    height: 1.5cm;
+    width: 5cm;
+    margin-bottom: 0%;
+    margin-top:1cm;
+    border: 2px solid rgb(181, 231, 82);
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  button:hover{
+    background-color:rgb(102, 146, 14);
+    height: 1.7cm;
+    width: 5.2cm;
+    margin-top: 0.7cm;
+    margin-top: 1cm;
+  }
+  
+ 
+  div.container2{
+    background-color:rgb(238, 237, 237);
+    height: 13cm;
+    width: 100%;
+    display: flex;
+    margin-top: 1cm;
+    padding-top: 2cm;
+  }
+  div.descp2{
+    width:45%;
+    font-size: 20px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      line-height:1cm;
+      color:rgb(128, 132, 129);
+      padding-top: 20px;
+      padding-left: 2cm;
+  }
+  div.vedio{
+    margin-left:5cm;
+    margin-top: 2cm;
+  }
+
+  div.container3{
+    background-image: url("i1.jpg");
+    background-color: rgba(255, 255, 255, 0);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 15cm;
+    width: 100%;
+    
+  }
+  div.descp3{
+    background-color: rgba(220, 220, 220, 0.168);
+    padding-left: 40px;
+    
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height:1cm;
+    color:white;
+    padding-top: 20px;
+    font-weight:bolder;
+    height: 14.5cm;
+    padding-right: 50%;
+  }
+  
+  .logo-container{
+   /* margin: 1cm;*/
+    display: flex;
+    width: 8cm;
+    justify-content: space-between;
+    margin-left: 2cm;
+    margin-top: 2cm;
+  }
+  .logo-container img:hover{
+    height: 40px;
+    width: 40px;
+  }
+
+  .donation-types-container {
+      display: flex;
+      overflow: hidden;
+      height: 10cm;
+      margin-top: 3cm;
+      padding-left: 2cm;
+    }
+
+    .donation-type {
+      flex: 0 0 auto;
+      margin-right: 3cm; /* Increased space between boxes */
+      transition: transform 0.3s; /* Smooth transition for hover effect */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Box shadow */
+      width: 250px; /* Increased width of each box */
+      height: 250px; /* Increased height of each box */
+      border-radius: 10px; /* Rounded corners for the box */
+      overflow: hidden;
+    }
+
+    .donation-type:hover {
+      transform: scale(1.1); /* Increase size on hover */
+      z-index: 1; /* Bring to front */
+    }
+
+    @keyframes moveBox {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .donation-type img {
+      width: 100%; /* Make image fill the box */
+      height: 70%; /* Adjust height of the image */
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .donation-type p {
+      text-align: center;
+      margin-top: 15px; /* Adjust spacing between image and text */
+      font-size: 25px;
+      
+      height: 1cm;
+      font-weight: bold;
+    }
+  .count{
+    height: 5cm;
+  }
+
+</style>
+
+
+  
+</head>
+<body>
+    <nav>
+        <div class="nav" id="logo">
+          
+        </div>
+      <div class="nav" id="home" style="background-color: rgb(236, 236, 67)">
+        Home</div>
+      </div>
+      <div class="nav" id="donate">Donate</div>
+      <div class="nav" id="gallery">Gallery
+      </div>
+      <div class="nav" id="grade">Grade</div>
+      <div class="nav" id="conatctus">Contact Us</div>
+      <div class="nav" id="login" style="margin-left: 9cm;">Login</div>
+      <div class="nav" id="register">Register</div>
+     
+  
+    </nav>
+
+    <div class="main">
+
+        <div class="welcome">
+          
+          <p class="wlcm">Welcome to Bright Share</p>
+        </div>
+
+    </div>
+
+    <div class="container1">
+        <div class="descp">
+            <p class="content"><h style="color:rgb(69, 71, 70);font-size: 30px;">
+              OUR VISION
+            </h><br><br>
+              To break the cycle of adversity and poverty, 
+              offering every child a chance at a brighter future.
+              <br>
+              Holistic support that goes beyond basics—shelter, education, healthcare, and emotional well-being. At Bright Share, we create a family-like environment where
+               children can rediscover hope and build a foundation for success.
+            <br><br>
+            Every donation to Bright Share is a ray of hope. Join our community, make a difference, and be a part of illuminating 
+            a path towards a brighter tomorrow for these deserving children.
+              </p>
+          </div>
+
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="logo.png" alt="Image" style="width:50%;height:50%;margin-top: 1cm;">
+                <p style="color:rgb(105, 108, 106) ;font-size: 20px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                padding: 20px; line-height:1cm;"> Help us to keep making these kids lives special by donating</p>
+              </div>
+              <div class="flip-box-back">
+                <h style="color:rgb(69, 71, 70);">
+                  Be a part of the family
+                </h>
+                <p >Every child deserves love, care, and a bright future. Support our orphanage and help us provide a nurturing environment for orphaned children.</p>
+                <button class="donate">DONATE NOW</button>
+              </div>
+            </div>
+          </div>
+        
+    </div>
+    
+
+    <div class="container2">
+      <div class="descp2">
+        <h style="color:rgb(69, 71, 70);font-size: 30px;">
+          INTRODUCTION VIDEO
+        </h><br><br>
+        <p>For more than 70 years, with the help of caring individuals worldwide and a lot of hard work, we wake up each day with the same goal: 
+          to bring as much love to as many children as possible. It’s not always easy, it comes with a long list of challenges to overcome… 
+          but we are doing it! Lives are being changed and stories rewritten. 
+          We are excited to have you along for the ride. Take a look at our introduction video for a quick rundown on who we are.</p>
+      </div>
+
+      <div class="vedio">
+        <video controls width="540" height="260">
+          <source src="video.mp4" type="video/mp4">
+          
+          Your browser does not support the video tag.
+      </video>
+      </div>
+    </div>
+
+  
+
+  
+    <div class="donation-types-container">
+      <div class="donation-type">
+        <img src="ration.jpg" alt="Ration">
+        <p>Ration</p>
+      </div>
+      <div class="donation-type">
+        <img src="clothes.jpg" alt="Clothes">
+        <p>Clothes</p>
+      </div>
+      <div class="donation-type">
+        <img src="stationary.jpg" alt="Stationary">
+        <p>Stationary</p>
+      </div>
+      <div class="donation-type">
+        <img src="healthcare.jpg" alt="Healthcare">
+        <p>Healthcare</p>
+      </div>
+    </div>
+    
+
+
+    <div class="container3">
+      <div class="descp3">
+        <h style="color:white;font-size: 30px;">
+          ABOUT BRIGHTSHARE
+        </h><br><br>
+        <p style="width:18cm;">Bright Share was established in [Year] with the vision of creating a nurturing space where orphaned children can find solace, support, and encouragement. Our team is a passionate group of individuals who share a common goal: 
+          to break the cycle of hardship and poverty by offering a helping hand to those who need it most</p>
+          <div class="logo-container">
+            <a href="chaitanya.cs22@bmsce.ac.in" target="_blank"><img src="gmaillogo.png" height="30px" width="30px"></a>
+            <a href="https://www.instagram.com/chaitanya_n_chetu?igsh=aWdyaWtqOWljanp1" target="_blank"><img src="instalogo.png" height="30px" width="30px"></a>
+            <a href="contact_us.html" target="_blank"><img src="facebooklogo.png" height="30px" width="30px"></a>
+            <a href="contact_us.html" target="_blank"><img src="linkedlnlogo.png" height="30px" width="30px"></a>
+          
+         
+          </div>
+      </div>
+      
+      </div>
+    
+
+    <script>
+        // Add event listener to the div
+        document.getElementById("donate").addEventListener("click", function() {
+          // Change window location to the desired URL
+          window.location.href = "login.html";
+        });
+        document.getElementById("home").addEventListener("click", function() {
+          // Change window location to the desired URL
+          window.location.href ="h.html";
+        });
+        document.getElementById("gallery").addEventListener("click", function() {
+          // Change window location to the desired URL
+          window.location.href = "gallery.html";
+        });
+        document.getElementById("grade").addEventListener("click", function() {
+          // Change window location to the desired URL
+          window.location.href = "grade.html";
+        });
+        document.getElementById("conatctus").addEventListener("click", function() {
+          // Change window location to the desired URL
+          window.location.href = "contact.html";
+        });
+        document.getElementById("login").addEventListener("click", function() {
+          // Change window location to the desired URL
+          window.location.href = "login.html";
+        });
+        document.getElementById("register").addEventListener("click", function() {
+          // Change window location to the desired URL
+          window.location.href = "doner_registration.html";
+        });
+
+       
+        document.addEventListener("DOMContentLoaded", function() {
+    // Get all donation type boxes
+    const donationTypes = document.querySelectorAll(".donation-type");
+
+    // Add click event listener to each donation type box
+    donationTypes.forEach(function(donationType) {
+      donationType.addEventListener("click", function() {
+        // Redirect to the donation form page (donation-form.html)
+        window.location.href = "login.html";
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Get all donation type boxes
+    const donationTypes = document.querySelectorAll(".donate");
+
+    // Add click event listener to each donation type box
+    donationTypes.forEach(function(donationType) {
+      donationType.addEventListener("click", function() {
+        // Redirect to the donation form page (donation-form.html)
+        window.location.href = "login.html";
+      });
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Fetch registration count from the server and update the span content
+    fetch('/api/registrations/count') // Assuming your backend API endpoint is /api/registrations/count
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('registrationCount').textContent = data.count;
+        })
+        .catch(error => console.error('Error fetching registration count:', error));
+});
+
+    </script>
+
+
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+}
+
+nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0;
+      padding: 0%;
+     /* background-image: url("1\ copy.png");*/
+     background-color: rgb(181, 231, 82);
+      display: flex;
+      flex-direction: row;
+      height: 2cm;
+    }
+
+    div.nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3cm;
+      height: 2cm;
+      margin: 0%;
+      padding: 0%;
+      margin-right: 30px;
+      /* border-radius: 30px; */
+      font-weight: bold;
+      text-align: center;
+      align-items: center;
+      font-size: 20px;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav div:hover {
+      background-color:rgb(236, 236, 67);
+    }
+   .logo:hover{
+      background-color:rgb(181, 231, 82) ;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0;
+      margin: 0%;
+      font-weight: bold;
+      text-align: center;
+      align-items: center;
+      font-size: large;
+    }
+
+    #logo{
+       background-image: url(logo.png);
+       background-size: contain;
+       background-position: 100%;
+       background-repeat: no-repeat;
+    }
+
+    .nav1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 30px;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+      width: 3cm;
+      font-size: large;
+      font-weight: bold;
+      font-family: inherit;
+    }
+
+    .donation-types-container {
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+      margin-top: 4cm;
+      padding-left: 2cm;
+    }
+
+    .row {
+      display: flex;
+      margin-bottom: 3cm; /* Spacing between rows */
+    }
+
+    .donation-type {
+      flex: 0 0 auto;
+      margin-right: 1.2cm; /* Increased space between boxes */
+      transition: transform 0.3s; /* Smooth transition for hover effect */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Box shadow */
+      width: 300px; /* Increased width of each box */
+      height:370px; /* Increased height of each box */
+      border-radius: 10px; /* Rounded corners for the box */
+      overflow: hidden;
+    }
+
+    .donation-type:hover {
+      transform: scale(1.1); /* Increase size on hover */
+      z-index: 1; /* Bring to front */
+    }
+
+    .donation-type img {
+      width: 100%; /* Make image fill the box */
+      height: 70%; /* Adjust height of the image */
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .donation-type p {
+      text-align: center;
+      margin-top: 15px; /* Adjust spacing between image and text */
+      font-size: 25px;
+      height: 1cm;
+      font-weight: bold;
+      
+      margin-bottom:0.2cm;
+    }
+  
+    .donation-type button {
+  padding: 10px 20px;
+  background-color:rgb(93, 135, 9) ;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 50%;
+  margin-left: 25%;
+  
+}
+
+.donation-type button:hover{
+  background-color: rgb(53, 76, 7);
+}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav" id="logo"></div>
+    <div class="nav" id="home">Home</div>
+    <div class="nav" id="donate" style="background-color: rgb(236, 236, 67)">Donate</div>
+    <div class="nav" id="gallery">Gallery</div>
+    <div class="nav" id="grade">Grade</div>
+    <div class="nav" id="conatctus">Contact Us</div>
+    <div class="nav" id="login" style="margin-left: 9cm;">Login</div>
+    <div class="nav" id="register">Register</div>
+  </nav>
+
+  <div class="donation-types-container">
+    <div class="row">
+      <div class="donation-type">
+        <img src="img1.jpg" alt="Ration">
+        <p>Home Of Faith</p>
+        <button class="donate-btn">Donate</button>
+      </div>
+      <div class="donation-type">
+        <img src="img2.jpeg" alt="Clothes">
+        <p>Jnana Mandira</p>
+        <button class="donate-btn">Donate</button>
+      </div>
+      <div class="donation-type">
+        <img src="img4.jpeg" alt="Stationary">
+        <p>Sukanksha Trust</p>
+        <button class="donate-btn">Donate</button>
+      </div>
+      <div class="donation-type">
+        <img src="i1.jpg" alt="Healthcare">
+        <p>Desire Society</p>
+        <button class="donate-btn">Donate</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Add donation type boxes for the second row here -->
+      <div class="row">
+        <div class="donation-type">
+          <img src="img1.jpg" alt="Ration">
+          <p>Kritagyata Trust</p>
+          <button class="donate-btn">Donate</button>
+        </div>
+        <div class="donation-type">
+          <img src="img2.jpeg" alt="Clothes">
+          <p>Samarthanam trust</p>
+          <button class="donate-btn">Donate</button>
+        </div>
+        <div class="donation-type">
+          <img src="contact.jpg" alt="Stationary">
+          <p>Yuktha Charitable Trust</p>
+          <button class="donate-btn">Donate</button>
+        </div>
+        <div class="donation-type">
+          <img src="i1.jpg" alt="Healthcare">
+          <p>Healthcare</p>
+          <button class="donate-btn">Donate</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Add donation type boxes for the third row here -->
+      <div class="row">
+        <div class="donation-type">
+          <img src="img4.jpeg" alt="Ration">
+          <p>Hosabelaku Trust</p>
+          <button class="donate-btn">Donate</button>
+        </div>
+        <div class="donation-type">
+          <img src="img1.jpg" alt="Clothes">
+          <p>Jnana Jyothy Trust</p>
+          <button class="donate-btn">Donate</button>
+        </div>
+        <div class="donation-type">
+          <img src="img2.jpeg" alt="Stationary">
+          <p>Shishu Mandir</p>
+          <button class="donate-btn">Donate</button>
+        </div>
+        <div class="donation-type">
+          <img src="img4.jpeg" alt="Healthcare">
+          <p>Rakshana</p>
+          <button class="donate-btn">Donate</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Add donation type boxes for the fourth row here -->
+    </div>
+  </div>
+
+  <script>
+    // Add event listener to the div
+    document.getElementById("donate").addEventListener("click", function() {
+        // Change window location to the desired URL
+        window.location.href = "login.html";
+      });
+      document.getElementById("home").addEventListener("click", function() {
+        // Change window location to the desired URL
+        window.location.href = "h.html";
+      });
+      document.getElementById("gallery").addEventListener("click", function() {
+        // Change window location to the desired URL
+        window.location.href = "gallery.html";
+      });
+      document.getElementById("grade").addEventListener("click", function() {
+        // Change window location to the desired URL
+        window.location.href = "grade.html";
+      });
+      document.getElementById("conatctus").addEventListener("click", function() {
+        // Change window location to the desired URL
+        window.location.href = "contact.html";
+      });
+      document.getElementById("login").addEventListener("click", function() {
+          // Change window location to the desired URL
+          window.location.href = "login.html";
+        });
+        document.getElementById("register").addEventListener("click", function() {
+          // Change window location to the desired URL
+          window.location.href = "doner_registration.html";
+        });
+
+         // Get all elements with the class "donate-btn"
+    var donateButtons = document.querySelectorAll(".donate-btn");
+
+// Loop through each donate button and attach a click event listener
+donateButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    // Redirect to the donation.html page when the button is clicked
+    window.location.href = "donate_form.html";
+  });
+});
+         
+        
+  </script>
+</body>
+</html>
